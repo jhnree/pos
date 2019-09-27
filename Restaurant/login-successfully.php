@@ -9,7 +9,20 @@ while($row = $result->fetch_assoc()){
     $arr = $row;
 }
 
-print_r($arr);
+if(empty($arr)){
+    echo 'Invalid Username or Password';
+}
+else{
+    // header('location: home.php');
+    if($arr['password'] == $_POST['password']){
+        echo 'Successfully login!';
+    }
+    else{
+        echo 'Incorrect Password';    
+    }
+}
+
+// print_r($arr);
 // if($conn->query($sql) === TRUE){
 //     header('location: index.php');
 // }
