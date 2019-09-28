@@ -15,7 +15,7 @@ if(empty($arr)){
 else{
     // header('location: home.php');
     if($arr['password'] == $_POST['password']){
-        echo 'Successfully login!';
+        header('location: home.php');
     }
     else{
         echo 'Incorrect Password';    

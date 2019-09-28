@@ -22,15 +22,16 @@
                         </div>
                         <div class="col-md-7 px-2">
                             <form method="post" action="login-successfully.php">
+                                
                                 <h5>Login</h5>
                                 <hr>
                                 <div class="form-group mt-5 pt-5">
-                                    <input type="text" name="username" placeholder="Username" class="form-control">
+                                    <input type="text" name="username" placeholder="Username" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" placeholder="Password" class="form-control">
+                                    <input type="password" name="password" placeholder="Password" class="form-control" required>
                                 </div>
-                                <button class="btn btn-success" type="submit">Submit</button>
+                                <button class="btn btn-success form-control mx-auto" type="submit">Submit</button>
                                 <a href="register.php" type="button" class="btn btn-info form-control mt-2">Sign Up</a>
                             </form>
                         </div>
