@@ -1,7 +1,7 @@
 <?php
 
-require_once('../../Restaurant/db.php');
-$sql = "SELECT username, password from tbl_user where username='".$_POST['username']."' and user_type='admin'";
+require_once('../../db.php');
+$sql = "SELECT username, password from tbl_user where username='".$_POST['username']."' and (user_type='admin' or user_type='superadmin' )";
 
 $arr = [];
 $result = $conn->query($sql);
@@ -14,7 +14,7 @@ if(empty($arr)){
 }
 else{
     if($arr['password'] == $_POST['password']){
-        header('location: ../home.php');
+        header('location: ../menu-list.php');
         // echo 'Successfully Login';
     }
     else{

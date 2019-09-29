@@ -1,0 +1,7 @@
+body{
+    background-color: whitesmoke!important;
+}
+
+.nav-item a:hover{
+    background-color: #474f56;
+}

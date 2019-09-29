@@ -1,6 +1,6 @@
 <?php
 
-require_once('db.php');
+require_once('../db.php');
 $sql = "SELECT username, password from tbl_user where username='".$_POST['username']."'";
 
 $arr = [];
