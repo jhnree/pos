@@ -4,7 +4,8 @@
     $sql = "UPDATE tbl_menu SET
                 menu = '".$_POST['menu']."',
                 description = '".$_POST['desc']."',
-                qty = ".$_POST['qty']."
+                qty = ".$_POST['qty'].",
+                modified_at = (SELECT CURRENT_TIMESTAMP())
             WHERE
                 id = ".$_POST['id']."
                 ";

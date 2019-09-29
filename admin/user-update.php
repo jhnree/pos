@@ -21,7 +21,7 @@
                 
             </div>
         </div>
-        <form method="post" action="actions/add-user-action.php">
+        <form method="post" action="actions/user-update-action.php">
             <input class="form-control" type="hidden" name="id" value=<?= $arr['id'] ?>>
             <div class="form-group">
                 <label for="username">Username</label>
