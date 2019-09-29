@@ -20,9 +20,8 @@
                         <div class="col-md-5">
                             <img src="img/pos.png" alt="">
                         </div>
-                        <div class="col-md-7 px-2">
+                        <div class="col-md-7 px-2 mt-4">
                             <form method="post" action="login-successfully.php">
-                                
                                 <h5>Login</h5>
                                 <hr>
                                 <div class="form-group mt-5 pt-5">

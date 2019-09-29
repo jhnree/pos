@@ -30,6 +30,7 @@
                     <a class="nav-link text-white disabled" href="account-list.php" tabindex="-1" aria-disabled="true">Account List</a>
                 </li>
             </ul>
+            <a class="text-white nav-link logout mx-0 px-0" href="login.php">Logout</a>
         </div>        
     </nav>
     <div class="container">

@@ -4,4 +4,12 @@ body{
 
 .nav-item a:hover{
     background-color: #474f56;
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
+}
+
+.logout:hover{
+    background-color: rgb(182, 53, 53);
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
 }

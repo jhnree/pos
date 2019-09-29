@@ -12,6 +12,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <title>POS</title>
 </head>
+<?php 
+    require_once('../db.php');
+
+    $sql = "SELECT menu, description FROM tbl_menu where qty > 0 and active = 1";
+
+    $arr = [];
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()){
+        $arr[] = $row;
+    }
+    // print_r($arr);
+?>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -21,48 +33,14 @@
                     <hr>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card mx-4">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/burger.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Yumburger</label>
+                    <?php foreach($arr as $val): ?>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card mx-auto shadow card-menu text-center py-4">
+                                    <h3 class="h3-height"><?= $val['description']?></h3>
+                                    <h2 class=""><?= $val['menu']?></h2>
                             </div>
                         </div>
-                        <div class="card mx-4 my-5">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/spag.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Jolly Spaghetti</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card mx-4">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/chickenjoy.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Chicken Joy</label>
-                            </div>
-                        </div>
-                        <div class="card mx-4 my-5">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/burger.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Yumburger</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card mx-4">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/burger.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Yumburger</label>
-                            </div>
-                        </div>
-                        <div class="card mx-4 my-5">
-                            <div class="card-body text-center">
-                                <img name="image" src="img/burger.png" class="img" alt="">
-                                <label for="image" class="segoe-bold">Yumburger</label>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
             <div class="col-lg-3 shadow outputs text-white">

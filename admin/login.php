@@ -16,7 +16,7 @@
     <div class="container-fluid p-4">
         <div class="row">
             <div class="col-lg-4 mx-auto pt-4">
-                <div class="card pt-4 shadow">
+                <div class="card pt-4 shadow mt-5">
                     <div class="card-body text-center">
                         <div class="mb-5">
                             <img src="img/admin.png" alt="">

@@ -9,6 +9,7 @@
         $arr = $row;
     }
     // print_r($arr);
+    $option = array('admin', 'customer');
 ?>
 
 <div class="card shadow">
@@ -34,9 +35,13 @@
             <div class="form-group">
                 <label for="usertype">User Type</label>
                 <select id="usertype" class="form-control mdb-select md-form colorful-select dropdown-dark" name="usertype" value="<?= $arr['user_type'] ?>">
-                    <option value="" disabled selected>Select User Type</option>
-                    <option value="admin">Admin</option>
-                    <option value="customer">Customer</option>
+                    <option value="" disabled>Select User Type</option>
+                    <?php foreach($option as $val): 
+                        if($val == $arr['user_type']){?>
+                            <option value="<?= $val; ?>" selected><?= $val;?></option>
+                        <?php } else{?>
+                            <option value="<?= $val; ?>"><?= $val;?></option>
+                    <?php } endforeach; ?>
                 </select>
             </div>
             <button class="btn btn-success px-4 float-right" type="submit">Submit</button>

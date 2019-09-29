@@ -20,3 +20,21 @@ body{
 .card-body img{
     height: 150px;
 }
+
+.col-lg-12 .card{
+    width: 300px!important;
+}
+
+.card-menu{
+    height: 200px;
+    cursor: pointer;
+}
+
+.card-menu:hover{
+    background-color: rgb(46, 46, 46);
+    color: whitesmoke!important;
+}
+
+.h3-height{
+    height: 100px!important;
+}
