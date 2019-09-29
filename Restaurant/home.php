@@ -34,7 +34,7 @@
                 </div>
                 <div class="row">
                     <?php foreach($arr as $val): ?>
-                        <div class="col-lg-4 mb-4">
+                        <div class="col-sm-4 mb-4">
                             <div class="card mx-auto shadow card-menu text-center py-4">
                                     <h3 class="h3-height"><?= $val['description']?></h3>
                                     <h2 class=""><?= $val['menu']?></h2>
